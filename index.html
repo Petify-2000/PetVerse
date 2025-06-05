@@ -3,113 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PetVerse App Information" />
-  <title>PetVerse Support</title>
+  <title>PetVerse - AI Pet Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary-color: #222;
-      --accent-color: #ff7f50;
-      --bg-color: #f9f9f9;
-      --text-color: #333;
-    }
-
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--primary-color);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    nav {
+      font-family: 'Space Grotesk', sans-serif;
+      background: radial-gradient(circle at top left, #ffe600, #ff4081);
+      color: #222;
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      padding: 2rem;
+      overflow-x: hidden;
     }
 
-    nav a {
-      padding: 0.5rem 1rem;
-      background-color: var(--accent-color);
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #ff6333;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h2 {
-      color: var(--accent-color);
-      font-size: 1.4rem;
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
       margin-top: 2rem;
+      background: linear-gradient(90deg, #ff4081, #ff9800);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideIn 1s ease forwards;
     }
 
     p {
-      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 2rem;
     }
 
-    ul {
-      padding-left: 1.5rem;
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 28px;
+      background: #fff;
+      border: 3px solid #222;
+      border-radius: 40px;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: 0.3s ease;
     }
 
-    footer {
+    .button:hover {
+      background: #222;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .faq {
+      margin-top: 4rem;
+      text-align: left;
+      max-width: 800px;
+      background: #ffffffdd;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .faq h2 {
+      font-size: 1.8rem;
+      color: #ff4081;
+      margin-bottom: 1.5rem;
       text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem 1rem;
-      color: #777;
+    }
+
+    .faq p {
+      margin-bottom: 1rem;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
+      h1 {
+        font-size: 2rem;
+      }
+      .button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+      .faq {
+        padding: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to PetVerse</h1>
-    <nav>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Support & FAQs</h2>
-      <ul>
-        <li><strong>How do I delete my account?</strong><br />You can delete your account and all associated data directly from the app’s settings under “Account.”</li>
-        <li><strong>Are the photos I upload safe?</strong><br />Yes. Photos are processed temporarily to generate AI content and are not stored or shared.</li>
-        <li><strong>Can I get a refund?</strong><br />No. Once a subscription has started, refunds are not provided.</li>
-        <li><strong>Is my content used to train AI?</strong><br />No. Your uploaded content is private and used only to generate visuals for you.</li>
-        <li><strong>Who can I contact for help?</strong><br />You can email us anytime at <a href="mailto:petlab6127@gmail.com">petlab6127@gmail.com</a>.</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 PetVerse. All rights reserved.
-  </footer>
+  <h1>Welcome to PetVerse 🐾</h1>
+  <p>Turn your pet into epic AI-generated art & animated videos with just one tap.</p>
+
+  <a class="button" href="privacy.html">Privacy Policy</a>
+  <a class="button" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a>
+  <a class="button" href="mailto:petlab6127@gmail.com?subject=Support%20Request%20-%20PetVerse">Support</a>
+
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q: How do I delete my account?</strong><br>A: You can delete your account and data from the app under the "Account" section.</p>
+    <p><strong>Q: Are my uploaded photos safe?</strong><br>A: Yes. Photos are processed temporarily and never stored or shared.</p>
+    <p><strong>Q: Can I get a refund?</strong><br>A: No. Subscriptions are non-refundable once started.</p>
+    <p><strong>Q: Is my content used to train AI?</strong><br>A: No. Your photos are used only for generating content for you and never reused.</p>
+    <p><strong>Q: How can I contact support?</strong><br>A: Click the "Support" button above or email us at petlab6127@gmail.com ✉️</p>
+  </div>
 </body>
 </html>
